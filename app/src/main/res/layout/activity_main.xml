@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="com.example.viewpagerandtablayoutwithmvvm.MainViewModel" />
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+                android:id="@+id/tab_category"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:tabGravity="fill"
+                app:tabIndicatorFullWidth="true"
+                app:tabIndicatorHeight="5dp"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
+                app:setupWithViewPager="@{pager}" />
+
+
+        <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:addOnPageChangeListener="@{viewModel.pageChangeListener}"
+                app:setAdapter="@{viewModel.adapter}"
+                app:setCurrentItem="@{viewModel.currentPosition}" />
+    </LinearLayout>
+</layout>
