@@ -8,7 +8,6 @@ class ChildFragmentViewModel(private val contract: ChildFragmentContract) {
         fun showToast(message: String)
     }
 
-
     val adapter = BindAdapter(
         id = R.layout.list_item,
         items = listOf<ModelItem>(),

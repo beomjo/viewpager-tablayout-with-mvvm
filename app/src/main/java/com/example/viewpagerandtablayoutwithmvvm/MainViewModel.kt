@@ -19,7 +19,6 @@ class MainViewModel(val contract: MainActivityContract) {
         )
     )
 
-
     var currentPosition = 0
 
     var pageChangeListener = object : ViewPager.OnPageChangeListener {
