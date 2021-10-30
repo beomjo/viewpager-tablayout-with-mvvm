@@ -1,5 +1,4 @@
-# ViewPagerAndTabLayoutWithMVVM
-ViewPager And TabLayout With MVVM   
+# ViewPager and TabLayout with MVVM
 
 ## Use Mvvm Pattern implement ViewPager,TabLayout
 
